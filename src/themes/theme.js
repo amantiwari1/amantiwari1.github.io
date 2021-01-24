@@ -4,13 +4,16 @@ export const lightTheme = {
     mainColor: '#FFF',
     text: '#363537',
     toggleBorder: '#FFF',
-    background: '#363537',
+    laptop: '#f8f9fa',
+    background: '#f2e9e4',
+
 }
 export const darkTheme = {
     mainColor: '#363537',
     text: '#FAFAFA',
     toggleBorder: '#6B8096',
     background: '#999',
+    laptop: '#22223b',
 }
 
 export const GlobalStyles  = createGlobalStyle`
