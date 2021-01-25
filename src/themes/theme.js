@@ -28,6 +28,8 @@ html {
     scroll-behavior: smooth;
   }
 body {
+  font-family: Comic Sans MS;
+
   min-height: 100vh;
   background-color: ${props => props.theme.mainColor};
   color: ${props => props.theme.text};

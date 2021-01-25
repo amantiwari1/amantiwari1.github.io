@@ -34,7 +34,7 @@ const Navbar = ({ theme }) => {
         <Nav>
 
           <NavItem activeStyle={ActiveLink} to="/">Home</NavItem>
-          <NavItem activeStyle={ActiveLink} to="/Contact">Contact</NavItem>
+          <NavItem activeStyle={ActiveLink} to="/contact">Contact</NavItem>
           <NavItem activeStyle={ActiveLink} to="/Resume">Resume</NavItem>
           <NavItem activeStyle={ActiveLink} to="/Project">Project</NavItem>
           <button onClick={theme}>Switch Theme</button>
