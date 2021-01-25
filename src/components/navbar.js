@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { Container } from "react-bootstrap";
 
 const HeaderStyle = styled.nav`
   overflow: hidden;
@@ -9,21 +10,18 @@ const HeaderStyle = styled.nav`
 
 const Nav = styled.ul`
   list-style-type: none;
-  padding: 9px 0px;
   text-align: right;
+  margin-top: 10px;
 `
 
 const NavItem = styled(Link)`
   display: inline;
   color: white;
-  padding: 9px 17px;
+  padding: 0px 17px;
   text-decoration: none;
 `
 
-const Container = styled.div`
-  display: grid;
-  grid-template-columns: 10% 80% 10%;
-`
+
 
 const ActiveLink = {
     color: "blue",
@@ -31,20 +29,19 @@ const ActiveLink = {
 
 const Navbar = ({ theme }) => {
   return (
-    <Container>
-      <HeaderStyle></HeaderStyle>
-      <HeaderStyle>
+    <HeaderStyle>
+          <Container>
         <Nav>
+
           <NavItem activeStyle={ActiveLink} to="/">Home</NavItem>
           <NavItem activeStyle={ActiveLink} to="/Contact">Contact</NavItem>
           <NavItem activeStyle={ActiveLink} to="/Resume">Resume</NavItem>
           <NavItem activeStyle={ActiveLink} to="/Project">Project</NavItem>
           <button onClick={theme}>Switch Theme</button>
         </Nav>
+          </Container>
       </HeaderStyle>
 
-      <HeaderStyle></HeaderStyle>
-    </Container>
   )
 }
 

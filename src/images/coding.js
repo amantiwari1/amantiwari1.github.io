@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const CodingStyle = styled.div`
+  
   #Background {
     fill: ${props => props.theme.text};
   }
@@ -17,6 +18,13 @@ const CodingStyle = styled.div`
   #Vector_37, #Vector_38 {
     fill: ${props => props.theme.laptop};
   }
+
+  svg {
+    width: 100% !important;
+    height: auto !important;
+  }
+  margin-top: 20px;
+
 `
 
 function coding(props) {
@@ -29,7 +37,7 @@ function coding(props) {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g id="undraw_developer_activity_bv83 1" clip-path="url(#clip0)">
+        <g id="undraw_developer_activity_bv83 1" clipPath="url(#clip0)">
           <g id="Background" filter="url(#filter0_d)">
             <path
               d="M1144 396.23C1144.01 413 1141.71 429.691 1137.15 445.83C1132.74 461.388 1126.26 476.282 1117.88 490.11C1117.88 540.21 1084.06 583.51 1034.97 604.11C1014.46 612.632 992.452 616.983 970.24 616.91H217.17C176.92 616.91 139.62 606.05 109.03 587.55C100.275 582.28 91.9705 576.296 84.2 569.66C50.2 540.44 29.12 500.06 29.12 455.46C10.0381 426.077 -0.0799637 391.775 -1.81681e-05 356.74C-1.81681e-05 283.38 43.39 220.3 105.55 192.45C113.804 188.754 122.333 185.704 131.06 183.33C134.147 182.49 137.267 181.737 140.42 181.07C148.826 179.28 157.352 178.11 165.93 177.57C169.03 177.377 172.147 177.267 175.28 177.24H177C180.46 177.24 183.89 177.36 187.3 177.56L188.42 175.66C189.793 173.367 191.2 171.097 192.64 168.85C195.24 164.757 197.967 160.723 200.82 156.75C203.807 152.557 206.923 148.43 210.17 144.37L211 143.37C212.84 141.077 214.72 138.81 216.64 136.57C222.64 129.577 228.973 122.793 235.64 116.22C307.75 45.54 420.72 0.0400085 547.72 0.0400085C646.54 0.0400085 736.87 27.59 806.06 73.11C832.272 58.2766 861.882 50.4933 892 50.52C989.74 50.52 1069 130.89 1069 230.03C1068.99 236.303 1068.65 242.571 1068 248.81C1091.56 265.488 1110.76 287.588 1123.99 313.245C1137.22 338.902 1144.08 367.364 1144 396.23Z"
@@ -288,7 +296,7 @@ function coding(props) {
             d="M802.18 306.93V311.05L796.3 310.48L785.24 299C785.24 299 802.35 302.83 802.18 306.93Z"
             fill="black"
             stroke="#4C4981"
-            stroke-miterlimit="10"
+            strokeMiterlimit="10"
           />
           <path
             id="Vector_44"
@@ -296,7 +304,7 @@ function coding(props) {
             d="M818.13 347.89L814.01 341.09V313.66C822.16 328.8 818.13 347.89 818.13 347.89Z"
             fill="black"
             stroke="#4C4981"
-            stroke-miterlimit="10"
+            strokeMiterlimit="10"
           />
           <path
             id="Vector_45"
@@ -1216,9 +1224,9 @@ function coding(props) {
             width="1152"
             height="624.871"
             filterUnits="userSpaceOnUse"
-            color-interpolation-filters="sRGB"
+            colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feColorMatrix
               in="SourceAlpha"
               type="matrix"
