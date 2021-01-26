@@ -21,8 +21,6 @@ const NavItem = styled(Link)`
   text-decoration: none;
 `
 
-
-
 const ActiveLink = {
     color: "blue",
 } 

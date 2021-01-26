@@ -11,7 +11,6 @@ import styled from "styled-components"
 const Body = styled.div`
   background-image: url(${BackgroundImage});
   min-height: 105vh;
-  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 `

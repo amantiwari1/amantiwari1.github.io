@@ -78,18 +78,6 @@ const IndexPage = () => {
           <Topic>Summary</Topic>
           <Coding />
           <Coding />
-          <Coding />
-          <Coding />
-          <Coding />
-          <Coding />
-          <Coding />
-          <Coding />
-          <Coding />
-          <Coding />
-          <Coding />
-          <Coding />
-          <Coding />
-          <Coding />
 
         </Col>
       </Row>

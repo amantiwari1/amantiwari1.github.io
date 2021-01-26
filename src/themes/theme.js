@@ -31,7 +31,6 @@ body {
   font-family: Comic Sans MS;
 
   min-height: 100vh;
-  background-color: ${props => props.theme.mainColor};
   color: ${props => props.theme.text};
   scrollbar-width: thin;
   scrollbar-color: #e76f51 #1d3557;
