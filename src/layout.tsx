@@ -7,9 +7,12 @@ import Navbar from "./components/navbar"
 import { Container } from "react-bootstrap"
 import { Body } from "./styles/LayoutStyle";
 
+interface LayoutProps {
+  readonly children ?: React.ReactNode | readonly React.ReactNode[]
+}
 
 
-const Layout = ({ children }) => {
+const Layout = ({ children }: LayoutProps) => {
   const [theme, themeToggler] = useDarkMode()
   const themeMode = theme === "light" ? lightTheme : darkTheme
 
@@ -17,11 +20,11 @@ const Layout = ({ children }) => {
     <ThemeProvider theme={themeMode}>
       <GlobalStyles />
       <Navbar theme={themeToggler} />
-      <Body>
+      <Body thememode={theme}>
         <Container>{children}</Container>
       </Body>
     </ThemeProvider>
   )
-}
+} 
 
 export default Layout

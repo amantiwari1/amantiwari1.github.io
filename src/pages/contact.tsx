@@ -1,6 +1,6 @@
 import React from 'react';
 
-function contact(props) {
+function contact() {
     return (
         <div>
             Hello

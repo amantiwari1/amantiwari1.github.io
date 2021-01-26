@@ -14,12 +14,13 @@ module.exports = {
       {
         resolve: `gatsby-plugin-layout`,
         options: {
-          component: require.resolve(`./src/layout.js`),
+          component: require.resolve(`./src/layout.tsx`),
         },
       },
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sharp`,
       `gatsby-plugin-scroll-reveal`,
       `gatsby-plugin-styled-components`,
+      `gatsby-plugin-typescript`,
     ],
   }
