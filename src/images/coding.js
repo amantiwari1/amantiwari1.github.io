@@ -1,37 +1,10 @@
 import React from "react"
-import styled from "styled-components"
+import { CodingStyle } from "../styles/CodingStyle";
 
-const CodingStyle = styled.div`
 
-  
-  #Background {
-    fill: ${props => props.theme.text};
-  }
-
-  #hair {
-    fill: #000;
-  }
-
-  #Table {
-    fill: ${props => props.theme.background};
-  }
-
-  #Vector_37, #Vector_38 {
-    fill: ${props => props.theme.laptop};
-  }
-
-  svg {
-    width: 100% !important;
-    height: auto !important;
-  }
-  margin-top: 20px;
-
-`
-
-function coding(props) {
+export const Coding = () =>  {
   return (
-    <CodingStyle>
-      <svg
+      <CodingStyle
         width="1144"
         height="618"
         viewBox="0 0 1144 618"
@@ -1255,9 +1228,7 @@ function coding(props) {
             <rect width="1144" height="617.32" fill="white" />
           </clipPath>
         </defs>
-      </svg>
-    </CodingStyle>
+      </CodingStyle>
   )
 }
 
-export default coding

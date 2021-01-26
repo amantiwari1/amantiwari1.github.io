@@ -1,29 +1,8 @@
 import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
 import { Container } from "react-bootstrap";
+import  {ActiveLink, Nav, NavItem, HeaderStyle} from "../styles/Navbarstyle"
 
-const HeaderStyle = styled.nav`
-  overflow: hidden;
-  background-color: #333;
-`
 
-const Nav = styled.ul`
-  list-style-type: none;
-  text-align: right;
-  margin-top: 10px;
-`
-
-const NavItem = styled(Link)`
-  display: inline;
-  color: white;
-  padding: 0px 17px;
-  text-decoration: none;
-`
-
-const ActiveLink = {
-    color: "blue",
-} 
 
 const Navbar = ({ theme }) => {
   return (
