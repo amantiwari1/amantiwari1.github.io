@@ -1,22 +1,21 @@
 import { createGlobalStyle } from "styled-components"
 
 export const lightTheme = {
-    mainColor: '#FFF',
-    text: '#363537',
-    toggleBorder: '#FFF',
-    laptop: '#f8f9fa',
-    background: '#f2e9e4',
-
+  mainColor: "#FFF",
+  text: "#363537",
+  toggleBorder: "#FFF",
+  laptop: "#f8f9fa",
+  background: "#f2e9e4",
 }
 export const darkTheme = {
-    mainColor: '#363537',
-    text: '#FAFAFA',
-    toggleBorder: '#6B8096',
-    background: '#999',
-    laptop: '#22223b',
+  mainColor: "#363537",
+  text: "#FAFAFA",
+  toggleBorder: "#6B8096",
+  background: "#999",
+  laptop: "#22223b",
 }
 
-export const GlobalStyles  = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
 
 * {
     padding: 0;
@@ -29,9 +28,6 @@ html {
   }
 body {
   font-family: Comic Sans MS;
-
-  min-height: 100vh;
-  background-color: ${props => props.theme.mainColor};
   color: ${props => props.theme.text};
   scrollbar-width: thin;
   scrollbar-color: #e76f51 #1d3557;

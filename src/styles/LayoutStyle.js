@@ -6,6 +6,8 @@ const Body = styled.div`
   background-image: url(${BackgroundImage});
   background-repeat: no-repeat;
   background-attachment: fixed;
+  min-height: 100vh;
+
 `
 
 export { Body}
