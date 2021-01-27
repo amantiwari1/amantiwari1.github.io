@@ -2,12 +2,16 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import { Col, Row } from "react-bootstrap"
 
-type Props = {
+type Skill = {
   skillcolor: string
   skillbackground: string
 }
 
-const Avatar = styled(Img)`
+interface ImageFixed {
+  fixed: any;
+}
+
+const Avatar = styled(Img)<ImageFixed>`
   margin: 10px;
   border-radius: 50%;
   border: 8px ${props => props.theme.text} solid;
@@ -48,15 +52,11 @@ const Card = styled.div`
   text-align: center;
 `
 
-const Content = styled.p`
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-bottom: 20px;
-  text-align: left;
-`
+const Content = styled.div`
+  margin: 10px;
+  `
 
-const Table = styled.table`
-  text-align: left;
+const Table = styled.div`
   margin: auto;
 `
 
@@ -73,16 +73,16 @@ const TableTitle = styled.p`
   font-weight: 700;
   font-size: 18px;
   white-space: nowrap;
-  text-align: left;
 `
 
-const Skillname = styled.div<Props>`
+const Skillname = styled.p<Skill>`
   background-color: ${props => props.skillbackground};
   color: ${props => props.skillcolor};
   padding: 5px;
   margin: 5px;
   border-radius: 70px;
   display: inline-block;
+  font-size: inherit;
 `
 export {
   Skillname,

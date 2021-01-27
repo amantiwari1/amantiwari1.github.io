@@ -3,7 +3,6 @@ import {
   Table,
   TR,
   TD,
-  Subtitle,
   TableTitle,
   Skillname,
 } from "../styles/Homestyle"
@@ -40,13 +39,14 @@ function Skills() {
     <div>
       <Table>
         {data.map(data => (
-          <TR>
+          <TR key={data.name}>
             <TD xs={12} md={6}>
               <TableTitle>{data.name}</TableTitle>
             </TD>
             <TD xs={12} md={6}>
               {data.skill.map(skill => (
                 <Skillname
+                  key={skill}
                   skillbackground={data.background}
                   skillcolor={data.color}
                 >

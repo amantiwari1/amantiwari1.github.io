@@ -1,5 +1,4 @@
 import React from "react"
-import { Coding } from "../images/coding"
 import { Col, Row } from "react-bootstrap"
 import { useStaticQuery, graphql } from "gatsby"
 import { Avatar, Header, Name, Topic, Content, Card } from "../styles/Homestyle"

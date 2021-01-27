@@ -2,7 +2,14 @@ import React from "react"
 import { Container } from "react-bootstrap"
 import { ActiveLink, Nav, NavItem, HeaderStyle } from "../styles/Navbarstyle"
 
-const Navbar = ({ theme }) => {
+
+
+
+interface NavbarProps {
+  theme: any;
+}
+
+const Navbar = ({ theme }: NavbarProps) => {
   return (
     <HeaderStyle>
       <Container>
