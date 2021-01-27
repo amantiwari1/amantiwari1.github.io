@@ -1,7 +1,5 @@
-
 import styled from "styled-components"
 import { Link } from "gatsby"
-
 
 const HeaderStyle = styled.nav`
   overflow: hidden;
@@ -22,8 +20,7 @@ const NavItem = styled(Link)`
 `
 
 const ActiveLink = {
-    color: "blue",
-} 
+  color: "blue",
+}
 
-
-export {ActiveLink, Nav, NavItem, HeaderStyle}
+export { ActiveLink, Nav, NavItem, HeaderStyle }

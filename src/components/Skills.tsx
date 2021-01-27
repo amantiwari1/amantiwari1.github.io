@@ -1,35 +1,64 @@
-import React from 'react';
-import { Table, TR, TD, Subtitle, TableTitle } from "../styles/Homestyle";
+import React from "react"
+import {
+  Table,
+  TR,
+  TD,
+  Subtitle,
+  TableTitle,
+  Skillname,
+} from "../styles/Homestyle"
 
+const data = [
+  {
+    name: "Programming Languages",
+    skill: ["Python", "Javascript", "Typescript"],
+    color: "white",
+    background: "blue",
+  },
+  {
+    name: "Frontend Frameworks",
+    skill: ["ReactJS", "GatsbyJS", "BootStrap", "Styled Compoments"],
+    color: "white",
+    background: "green",
+  },
+  {
+    name: "Backend  Frameworks",
+    skill: ["Fastapi", "Node.js"],
+    color: "black",
+    background: "yellow",
+  },
+  {
+    name: "Databases",
+    skill: ["MySQL", "PostgreSQL", "MongoDB"],
+    color: "white",
+    background: "red",
+  },
+]
 
 function Skills() {
-    return (
-        <div>
-            <Table>
-            <TR>
-                <TableTitle>
-                Programming Languages
-                </TableTitle>
-            </TR>
-            <TR>
-                <TableTitle>
-                Front End Libraries & Frameworks
-                </TableTitle>
-            </TR>
-            <TR>
-                <TableTitle>
-                Back End Libraries and Frameworks
-                </TableTitle>
-            </TR>
-            <TR>
-                <TableTitle>
-                Databases
-                </TableTitle>
-            </TR>
-
-            </Table>
-        </div>
-    );
+  return (
+    <div>
+      <Table>
+        {data.map(data => (
+          <TR>
+            <TD xs={12} md={6}>
+              <TableTitle>{data.name}</TableTitle>
+            </TD>
+            <TD xs={12} md={6}>
+              {data.skill.map(skill => (
+                <Skillname
+                  skillbackground={data.background}
+                  skillcolor={data.color}
+                >
+                  {skill}
+                </Skillname>
+              ))}
+            </TD>
+          </TR>
+        ))}
+      </Table>
+    </div>
+  )
 }
 
-export default Skills;
+export default Skills

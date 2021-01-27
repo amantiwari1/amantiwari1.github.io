@@ -1,16 +1,24 @@
 import { createGlobalStyle } from "styled-components"
+import { DefaultTheme } from "styled-components";
 
-export const lightTheme = {
+declare module "styled-components" {
+  export interface DefaultTheme {
+    mainColor: string;
+    text: string;
+    laptop: string;
+    background: string;
+  }
+}
+
+export const lightTheme: DefaultTheme = {
   mainColor: "#FFF",
   text: "#363537",
-  toggleBorder: "#FFF",
   laptop: "#f8f9fa",
   background: "#f2e9e4",
 }
-export const darkTheme = {
+export const darkTheme:  DefaultTheme = {
   mainColor: "#363537",
   text: "#FAFAFA",
-  toggleBorder: "#6B8096",
   background: "#999",
   laptop: "#22223b",
 }
@@ -22,25 +30,31 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0;
 
 }
+
+
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
   }
 body {
+
+  --scroll-bar: ${props => props.theme.mainColor};
+  --scroll-bar-background: ${props => props.theme.text};
+
   font-family: Comic Sans MS;
   color: ${props => props.theme.text};
   scrollbar-width: thin;
-  scrollbar-color: #e76f51 #1d3557;
+  scrollbar-color: var(--scroll-bar-background) var(--scroll-bar);
   &::-webkit-scrollbar {
     width: 15px;
   }
   &::-webkit-scrollbar-track {
-    background: #1d3557;
+    background: var(--scroll-bar);
   }
   &::-webkit-scrollbar-thumb {
-    background-color: #e76f51;
+    background-color: var(--scroll-bar-background);
     border-radius: 14px;
-    border: 3px solid #1d3557;
+    border: 3px solid var(--scroll-bar);
   }
 }
 `
