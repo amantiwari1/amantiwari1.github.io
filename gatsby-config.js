@@ -18,6 +18,12 @@ module.exports = {
         component: require.resolve(`./src/layout.tsx`),
       },
     },
+    {
+      resolve: 'gatsby-plugin-load-script',
+      options: {
+        src: 'https://kit.fontawesome.com/a076d05399.js',
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,

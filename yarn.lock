@@ -912,7 +912,7 @@
     core-js-pure "^3.0.0"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@7.12.5", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.4.2", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7":
+"@babel/runtime@7.12.5", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.4.2", "@babel/runtime@^7.5.5", "@babel/runtime@^7.6.3", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.8.7", "@babel/runtime@^7.9.2":
   version "7.12.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
   integrity sha512-plcc+hbExy3McchJCEQG3knOsuh3HH+Prx1P6cLIkET/0dLuQDEnrT+s27Axgc9bqfsmNUNHfscgMUdBpC9xfg==
@@ -6018,6 +6018,13 @@ gatsby-plugin-layout@^1.9.0:
   integrity sha512-M2eRSDI5rrMlLhUFS3Z7wO7lMdxMgMX5GGff4+lOcXnmoPiQNM4W2paMQFeibCu7Hu9fYLPiJNbUenOLIIrDFw==
   dependencies:
     "@babel/runtime" "^7.12.5"
+
+gatsby-plugin-load-script@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-load-script/-/gatsby-plugin-load-script-1.1.0.tgz#b73dc8248ad0e3565d3f848bfd1ecd64f2b7aad2"
+  integrity sha512-EoXUtWX4aBO4zD61xMHIIlQti4FNYmH0KgBkhac+kNMLI64cjzLc0iD7zPrFnzjYR454XAN/GJBa7M7N/VYSpw==
+  dependencies:
+    "@babel/runtime" "^7.9.2"
 
 gatsby-plugin-optimize-svgs@^1.0.5:
   version "1.0.5"

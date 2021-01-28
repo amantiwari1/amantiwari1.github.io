@@ -13,6 +13,7 @@ interface ImageFixed {
 
 const Avatar = styled(Img)<ImageFixed>`
   margin: 10px;
+  margin-top: 80px;
   border-radius: 50%;
   border: 8px ${props => props.theme.text} solid;
 `

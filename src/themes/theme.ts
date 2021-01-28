@@ -1,12 +1,12 @@
 import { createGlobalStyle } from "styled-components"
-import { DefaultTheme } from "styled-components";
+import { DefaultTheme } from "styled-components"
 
 declare module "styled-components" {
   export interface DefaultTheme {
-    mainColor: string;
-    text: string;
-    laptop: string;
-    background: string;
+    mainColor: string
+    text: string
+    laptop: string
+    background: string
   }
 }
 
@@ -16,7 +16,7 @@ export const lightTheme: DefaultTheme = {
   laptop: "#f8f9fa",
   background: "#f2e9e4",
 }
-export const darkTheme:  DefaultTheme = {
+export const darkTheme: DefaultTheme = {
   mainColor: "#363537",
   text: "#FAFAFA",
   background: "#999",
@@ -26,8 +26,9 @@ export const darkTheme:  DefaultTheme = {
 export const GlobalStyles = createGlobalStyle`
 
 * {
-    padding: 0;
     margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
 }
 
