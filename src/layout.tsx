@@ -41,7 +41,8 @@ const Layout = ({ children }: LayoutProps) => {
       <GlobalStyles />
       <Navbar theme={themeToggler} />
       <Body DarkMode={data.DarkMode.publicURL} LightMode={data.LightMode.publicURL} thememode={theme}>
-        <Container>{children}</Container>
+
+        <Container><div style={{ marginTop: "60px" }}></div>{children}</Container>
       </Body>
       <Footer />
     </ThemeProvider>

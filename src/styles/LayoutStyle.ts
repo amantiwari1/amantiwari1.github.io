@@ -10,7 +10,7 @@ const Body = styled.div<BodyInterface>`
   background-image: url(${props => props.thememode === "light" ? props.LightMode : props.DarkMode});
   background-repeat: no-repeat;
   background-attachment: fixed;
-  min-height: 100vh;
+  min-height: 85.5vh;
 `
 
 

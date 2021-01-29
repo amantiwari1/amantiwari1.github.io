@@ -13,7 +13,7 @@ interface ImageFixed {
 
 const Avatar = styled(Img)<ImageFixed>`
   margin: 10px;
-  margin-top: 80px;
+  margin-top: 10px;
   border-radius: 50%;
   border: 8px ${props => props.theme.text} solid;
 `
@@ -27,7 +27,7 @@ const Header = styled.div`
 const Name = styled.div`
   font-size: 30px;
   font-weight: 700;
-  background-color: ${props => props.theme.mainColor};
+  backdrop-filter: blur(8px);
   text-align: center;
   border-radius: 60px;
   margin-left: auto;
@@ -43,13 +43,14 @@ const Topic = styled.p`
   text-align: center;
   width: auto;
   border-radius: 60px;
-  background-color: ${props => props.theme.mainColor};
+  backdrop-filter: blur(8px);
+
   text-decoration: underline;
 `
 const Card = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   border-radius: 10px;
-  background-color: ${props => props.theme.mainColor};
+  backdrop-filter: blur(8px);
   text-align: center;
 `
 
@@ -73,7 +74,7 @@ const TD = styled(Col)``
 const TableTitle = styled.p`
   font-weight: 700;
   font-size: 18px;
-  white-space: nowrap;
+  white-space: nowrap;  
 `
 
 const Skillname = styled.p<Skill>`

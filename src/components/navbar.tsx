@@ -1,6 +1,7 @@
 import React from "react"
 import { Container } from "react-bootstrap"
-import { NavItem, HeaderStyle, Div } from "../styles/Navbarstyle"
+import { NavItem, HeaderStyle, Div, FontAwesomeIconStyle } from "../styles/Navbarstyle"
+import { faHome, faIdCard, faProjectDiagram, faClock } from '@fortawesome/free-solid-svg-icons'
 
 
 
@@ -41,15 +42,12 @@ const Navbar = (props: NavbarProps) => {
             <label htmlFor="click" onClick={handleClick} className="menu-btn">
               <i className="fas fa-bars"></i>
             </label>
-            <ul>
+            <ul >
 
-
-
-
-              <li><NavItem activeClassName="activelink" onClick={handleClick} to="/">Home</NavItem></li>
-              <li ><NavItem activeClassName="activelink" onClick={handleClick} to="/contact">Contact</NavItem></li>
-              <li><NavItem activeClassName="activelink" onClick={handleClick} to="/project">Project</NavItem></li>
-              <li><NavItem activeClassName="activelink" onClick={handleClick} to="/timeline">Timeline</NavItem></li>
+              <li><NavItem activeClassName="activelink" onClick={handleClick} to="/"> <FontAwesomeIconStyle icon={faHome} /> Home  </NavItem></li>
+              <li ><NavItem activeClassName="activelink" onClick={handleClick} to="/contact"><FontAwesomeIconStyle icon={faIdCard} /> Contact</NavItem></li>
+              <li><NavItem activeClassName="activelink" onClick={handleClick} to="/project"><FontAwesomeIconStyle icon={faProjectDiagram} /> Project</NavItem></li>
+              <li><NavItem activeClassName="activelink" onClick={handleClick} to="/timeline"><FontAwesomeIconStyle icon={faClock} /> Timeline</NavItem></li>
 
 
             </ul>

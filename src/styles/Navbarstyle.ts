@@ -1,5 +1,7 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 const HeaderStyle = styled.div`
   overflow: hidden;
@@ -15,7 +17,7 @@ const NavItem = styled(Link)`
   color: ${props => props.theme.text};
   
 
-  display: inline;
+  
   text-decoration: none;
   z-index: 3 !important;
   text-decoration: none;
@@ -25,6 +27,8 @@ const NavItem = styled(Link)`
   border-radius: 5px;
   letter-spacing: 1px;
   transition: all 0.3s ease;
+  white-space: nowrap;
+  
 
   &:hover {
     text-decoration: none;
@@ -121,7 +125,7 @@ const Div = styled.div`
     display: none;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 920px) {
     nav {
       z-index: 3 !important;
       padding: 0 10px 0 10px;
@@ -176,4 +180,9 @@ const Div = styled.div`
   }
 `
 
-export {  Nav, NavItem, HeaderStyle, Div }
+const FontAwesomeIconStyle = styled(FontAwesomeIcon)`
+    margin-right: 5px;
+
+`
+
+export {FontAwesomeIconStyle,  Nav, NavItem, HeaderStyle, Div }
