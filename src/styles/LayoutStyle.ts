@@ -11,6 +11,12 @@ const Body = styled.div<BodyInterface>`
   background-repeat: no-repeat;
   background-attachment: fixed;
   min-height: 85.5vh;
+
+
+ @media (max-width: 760px) {
+   background-image: none;
+   background-color: ${props => props.theme.mainColor}
+ }
 `
 
 

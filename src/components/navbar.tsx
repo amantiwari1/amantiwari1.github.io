@@ -1,8 +1,8 @@
 import React from "react"
 import { Container } from "react-bootstrap"
 import { NavItem, HeaderStyle, Div, FontAwesomeIconStyle } from "../styles/Navbarstyle"
-import { faHome, faIdCard, faProjectDiagram, faClock } from '@fortawesome/free-solid-svg-icons'
-
+import { faHome, faIdCard, faProjectDiagram, faClock, faBorderNone } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "gatsby";
 
 
 
@@ -27,7 +27,7 @@ const Navbar = (props: NavbarProps) => {
           <nav>
             <div className="space-around">
               <div className="logo">
-                <i className="fas fa-laptop-code"></i>
+              <Link style={{color: "inherit"}}to="/">  <i className="fas fa-laptop-code"></i> </Link>
               </div>
 
               <div className="darkorlight">

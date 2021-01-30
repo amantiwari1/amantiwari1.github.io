@@ -28,5 +28,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-optimize-svgs`,
   ],
 }

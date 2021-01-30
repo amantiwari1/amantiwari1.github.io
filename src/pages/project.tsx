@@ -26,7 +26,7 @@ const data = [
         ]
     },
     {
-        title: "Face Deletection in Real Time",
+        title: "Face Detection  in Real Time",
         subtitle: ["This is a Machine Learning project. I built the Real-Time Face with Collect Image automatically by CV2 and split it into Training and Testing for evaluation. It is used by the CNN model."],
         button: [
             {
@@ -48,13 +48,27 @@ function project() {
       }
     }
   }
+  datastructure: file(relativePath: {eq: "datastructure.jpg"}) {
+    childImageSharp {
+      fluid(fit: COVER, cropFocus: CENTER, maxHeight: 500, maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+  face: file(relativePath: {eq: "face.png"}) {
+    childImageSharp {
+      fluid(fit: COVER, cropFocus: CENTER, maxHeight: 500, maxWidth: 800) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
       }
   `)
     return (
         <ProjectStyle>
             <ProjectCard fluid={Imagefeature.CourseBlog.childImageSharp.fluid} data={data[0]} />
-            <ProjectCard fluid={Imagefeature.CourseBlog.childImageSharp.fluid} data={data[1]} />
-            <ProjectCard fluid={Imagefeature.CourseBlog.childImageSharp.fluid} data={data[2]} />
+            <ProjectCard fluid={Imagefeature.datastructure.childImageSharp.fluid} data={data[1]} />
+            <ProjectCard fluid={Imagefeature.face.childImageSharp.fluid} data={data[2]} />
         </ProjectStyle>
     );
 }
