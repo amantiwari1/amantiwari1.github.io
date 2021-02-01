@@ -1,14 +1,14 @@
 import styled from "styled-components"
 
-const Timelinestyle = styled.div`
-  .timeline {
+
+const TimelineDiv = styled.div`
+
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
-}
 
 /* The actual timeline (the vertical ruler) */
-.timeline::after {
+&::after {
   content: '';
   position: absolute;
   width: 6px;
@@ -18,6 +18,18 @@ const Timelinestyle = styled.div`
   left: 50%;
   margin-left: -3px;
 }
+
+@media screen and (max-width: 770px) {
+  /* Place the timelime to the left */
+  &::after {
+  left: 29px;
+  }
+}
+
+`
+
+const Timelinestyle = styled.div`
+
 
 /* Container around content */
 .container {
@@ -98,10 +110,7 @@ const Timelinestyle = styled.div`
 /* Media queries - Responsive timeline on screens less than 600px wide */
 @media screen and (max-width: 770px) {
   /* Place the timelime to the left */
-  .timeline::after {
-  left: 29px;
-  }
-  
+
   /* Full-width containers */
   .container {
   width: 100%;
@@ -132,4 +141,4 @@ const Timelinestyle = styled.div`
 }
 `
 
-export {Timelinestyle}
+export {Timelinestyle, TimelineDiv}

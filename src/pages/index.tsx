@@ -4,8 +4,10 @@ import { useStaticQuery, graphql } from "gatsby"
 import { Avatar, Header, Name, Topic, Content, Card } from "../styles/Homestyle"
 import Education from "../components/education"
 import Skills from "../components/Skills"
+import GitHubCalendar from "github-calendar";
 
 const IndexPage = () => {
+  GitHubCalendar(".calendar", "amantiwari");
   const data = useStaticQuery(graphql`
     query MyQuery {
       file(relativePath: { eq: "aman.png" }) {
@@ -34,7 +36,7 @@ const IndexPage = () => {
             </div>
           </Header>
         </Col>
-      
+
       </Row>
       <Row>
         <Col>
@@ -68,6 +70,13 @@ const IndexPage = () => {
             </Content>
           </Card>
         </Col>
+      </Row>
+      <Row>
+        <div className="calendar">
+        </div>
+
+
+            
       </Row>
     </>
   )

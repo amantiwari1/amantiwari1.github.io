@@ -24,6 +24,19 @@ module.exports = {
         src: 'https://kit.fontawesome.com/a076d05399.js',
       },
     },
+    {
+      resolve: 'gatsby-plugin-load-script',
+      options: {
+        src: 'https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js',
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-load-script',
+      options: {
+        src: 'https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css',
+        rel: "stylesheet"
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-components`,

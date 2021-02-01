@@ -45,9 +45,11 @@ const Navbar = (props: NavbarProps) => {
             <ul >
 
               <li><NavItem activeClassName="activelink" onClick={handleClick} to="/"> <FontAwesomeIconStyle icon={faHome} /> Home  </NavItem></li>
-              <li ><NavItem activeClassName="activelink" onClick={handleClick} to="/contact"><FontAwesomeIconStyle icon={faIdCard} /> Contact</NavItem></li>
               <li><NavItem activeClassName="activelink" onClick={handleClick} to="/project"><FontAwesomeIconStyle icon={faProjectDiagram} /> Project</NavItem></li>
               <li><NavItem activeClassName="activelink" onClick={handleClick} to="/timeline"><FontAwesomeIconStyle icon={faClock} /> Timeline</NavItem></li>
+              <li><NavItem activeClassName="activelink" onClick={handleClick} to="/Certification"><FontAwesomeIconStyle icon={faClock} /> Certification</NavItem></li>
+              <li ><NavItem activeClassName="activelink" onClick={handleClick} to="/contact"><FontAwesomeIconStyle icon={faIdCard} /> Contact</NavItem></li>
+
 
 
             </ul>
