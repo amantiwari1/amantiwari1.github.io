@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectStyle, ProjectCard, ProjectLeftCard } from "../styles/ProjectStye";
+import { ProjectStyle, ProjectCard } from "../styles/ProjectStye";
 import { useStaticQuery, graphql } from "gatsby";
 
 

@@ -129,4 +129,4 @@ const ProjectLeftCard = ({ fluid, data }: ProjectCardProps) => (
   </Card>
 )
 
-export { ProjectStyle, ProjectCard, ProjectLeftCard }
+export { ProjectStyle,ButtonView, ButtonDiv, ProjectCard, ProjectLeftCard }
