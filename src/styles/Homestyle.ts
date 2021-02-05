@@ -1,17 +1,18 @@
-import Img from "gatsby-image"
 import styled from "styled-components"
 import { Col, Row } from "react-bootstrap"
+import { GatsbyImage } from "gatsby-plugin-image"
+
 
 type Skill = {
   skillcolor: string
   skillbackground: string
 }
 
-interface ImageFixed {
-  fixed: any;
-}
+const HomeHeader = styled.div`
+        min-height: 100vh;
 
-const Avatar = styled(Img)<ImageFixed>`
+` 
+const Avatar = styled(GatsbyImage)`
   margin: 10px;
   margin-top: 10px;
   border-radius: 50%;
@@ -99,4 +100,5 @@ export {
   Subtitle,
   TD,
   TableTitle,
+  HomeHeader,
 }

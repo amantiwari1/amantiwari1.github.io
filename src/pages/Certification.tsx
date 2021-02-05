@@ -6,7 +6,6 @@ import { ButtonView, ButtonDiv } from "../styles/ProjectStye";
 
 
 
-
 import { CertificationCardDiv, CertificationCardStyle } from "../styles/CertificationStyle";
 
 const Certification = () => {
@@ -17,10 +16,10 @@ const Certification = () => {
         name
       fields {
         title
-        downloadurl
+        url
       }
       childImageSharp {
-        gatsbyImageData(placeholder: BLURRED)
+        gatsbyImageData(placeholder: BLURRED, transformOptions: {fit: COVER, cropFocus: CENTER}, width: 800, height: 500)
       }
     }
   }
@@ -30,22 +29,18 @@ const Certification = () => {
         <CertificationCardDiv>
             {
                 data.allFile.nodes.map((data: any) => (
-                    <Col xs={12} md={6} lg={4}>
+                    <Col style={{padding: "10px"}} xs={12} md={6} lg={4}>
                         <CertificationCardStyle  >
                             <Row >
                                 <Col lg={12}>
                                     <GatsbyImage image={data.childImageSharp.gatsbyImageData} alt={data.fields.title} />
                                 </Col>
                                 <Col lg={12} >
-                                    <h3>{data.fields.title}</h3>
+                                    <h5>{data.fields.title}</h5>
                                     <ButtonDiv>
-                                        <ButtonView href={data.fields.downloadurl} download={data.name}>
-                                            Download
-                                        </ButtonView>
-                                        <ButtonView target="_blank" rel="noopener noreferrer" href="https://www.datacamp.com/statement-of-accomplishment/track/94b31f609cb8dfd74f9b158dcb55b4e6155fc6e5?raw=1" >
+                                        <ButtonView target="_blank" rel="noopener noreferrer" href={data.fields.url} download={data.name}>
                                             View
                                         </ButtonView>
-
                                     </ButtonDiv>
                                 </Col>
                             </Row>

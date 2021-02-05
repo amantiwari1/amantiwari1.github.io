@@ -1,76 +1,69 @@
 import React from 'react';
-import { ProjectStyle, ProjectCard } from "../styles/ProjectStye";
+import { ProjectStyle, Card, TitleProject, SubtitleProject, ButtonDiv, ButtonView } from "../styles/ProjectStye";
 import { useStaticQuery, graphql } from "gatsby";
+import { Row, Col } from "react-bootstrap";
+import { GatsbyImage } from "gatsby-plugin-image"
 
 
 
-const data = [
-    {
-        title: "Course and Internsip Blog",
-        subtitle: ["This project is Course and Internship website where to enroll,  Where and how to apply for free with  blazing fast website. Built by GatsbyJS and Styled Compoments"],
-        button: [
-            {
-                name: "View Website",
-                url: "http://react-mini-16338.web.app/",
-            },
-        ]
-    },
-    {
-        title: "Data Structures & Algorithms Implementation",
-        subtitle: ["This repository is dedicated to Data Structures and Algorithms Implementation which I've learnt till the date. Language of implementation is python."],
-        button: [
-            {
-                name: "View Project",
-                url: "https://github.com/amantiwari1/data_structure",
-            },
-        ]
-    },
-    {
-        title: "Face Detection  in Real Time",
-        subtitle: ["This is a Machine Learning project. I built the Real-Time Face with Collect Image automatically by CV2 and split it into Training and Testing for evaluation. It is used by the CNN model."],
-        button: [
-            {
-                name: "View Project",
-                url: "https://github.com/amantiwari1/Real_Time_Detection",
-            },
-        ]
-    },
-]
 
 
 function project() {
-    const Imagefeature = useStaticQuery(graphql`
-      query Imagefeature {
-        CourseBlog: file(relativePath: {eq: "CourseBlog.jpg"}) {
-    childImageSharp {
-      fluid(fit: COVER, cropFocus: CENTER, maxHeight: 500, maxWidth: 800) {
-        ...GatsbyImageSharpFluid
+  const data = useStaticQuery(graphql`
+      {
+  allFile(filter: {relativeDirectory: {eq: "Project"}}) {
+    nodes {
+      fields {
+        subtitle
+        title
+        urlarray {
+          link
+          name
+        }
+      }
+      childImageSharp {
+        gatsbyImageData(placeholder: BLURRED, transformOptions: {fit: COVER, cropFocus: CENTER}, width: 800, height: 500)
       }
     }
   }
-  datastructure: file(relativePath: {eq: "datastructure.jpg"}) {
-    childImageSharp {
-      fluid(fit: COVER, cropFocus: CENTER, maxHeight: 500, maxWidth: 800) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-  face: file(relativePath: {eq: "face.png"}) {
-    childImageSharp {
-      fluid(fit: COVER, cropFocus: CENTER, maxHeight: 500, maxWidth: 800) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-      }
+}
+
+
   `)
-    return (
-        <ProjectStyle>
-            <ProjectCard fluid={Imagefeature.CourseBlog.childImageSharp.fluid} data={data[0]} />
-            <ProjectCard fluid={Imagefeature.datastructure.childImageSharp.fluid} data={data[1]} />
-            <ProjectCard fluid={Imagefeature.face.childImageSharp.fluid} data={data[2]} />
-        </ProjectStyle>
-    );
+  return (
+    <ProjectStyle>
+      {
+        data.allFile.nodes.map((data: any) => (
+          <>
+            <Card xs={12}>
+              <Row>
+                <Col style={{ padding: "0" }} xs={12} md={5} >
+                <GatsbyImage image={data.childImageSharp.gatsbyImageData} alt={data.fields.title} />
+                </Col>
+                <Col xs={12} md={7}>
+                  <>
+                    <TitleProject>
+                      {data.title}
+                    </TitleProject>
+                        <SubtitleProject >{data.fields.subtitle}</SubtitleProject>
+                    <ButtonDiv>
+                      {
+                        data.fields.urlarray.map((data: any) => (
+                          <ButtonView key={data.name} target="_blank" rel="noopener noreferrer" href={data.link}>
+                            {data.name}
+                          </ButtonView>
+                        ))
+                      }
+                    </ButtonDiv>
+                  </>
+                </Col>
+              </Row>
+            </Card>
+          </>
+        ))
+      }
+    </ProjectStyle>
+  );
 }
 
 export default project;

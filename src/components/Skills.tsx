@@ -6,45 +6,19 @@ import {
   TableTitle,
   Skillname,
 } from "../styles/Homestyle"
-
-const data = [
-  {
-    name: "Programming Languages",
-    skill: ["Python", "Javascript", "Typescript"],
-    color: "white",
-    background: "blue",
-  },
-  {
-    name: "Frontend Frameworks",
-    skill: ["ReactJS", "GatsbyJS", "BootStrap", "Styled Compoments"],
-    color: "white",
-    background: "green",
-  },
-  {
-    name: "Backend  Frameworks",
-    skill: ["Fastapi", "Node.js"],
-    color: "black",
-    background: "yellow",
-  },
-  {
-    name: "Databases",
-    skill: ["MySQL", "PostgreSQL", "MongoDB"],
-    color: "white",
-    background: "red",
-  },
-]
+const {SkillData} = require("../data.ts")
 
 function Skills() {
   return (
     <div>
       <Table>
-        {data.map(data => (
+        {SkillData.map((data: any) => (
           <TR key={data.name}>
             <TD xs={12} md={6}>
               <TableTitle>{data.name}</TableTitle>
             </TD>
             <TD xs={12} md={6}>
-              {data.skill.map(skill => (
+              {data.skill.map((skill: string) => (
                 <Skillname
                   key={skill}
                   skillbackground={data.background}

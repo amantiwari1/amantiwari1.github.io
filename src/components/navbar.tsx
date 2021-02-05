@@ -1,7 +1,7 @@
 import React from "react"
 import { Container } from "react-bootstrap"
 import { NavItem, HeaderStyle, Div, FontAwesomeIconStyle } from "../styles/Navbarstyle"
-import { faHome, faIdCard, faProjectDiagram, faClock, faBorderNone } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faIdCard, faProjectDiagram, faClock } from '@fortawesome/free-solid-svg-icons'
 import { Link } from "gatsby";
 
 

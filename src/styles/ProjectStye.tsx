@@ -76,57 +76,33 @@ const ProjectCard = ({ fluid, data }: ProjectCardProps) => (
 
   <Card xs={12}>
     <Row>
-
-
       <Col style={{ padding: "0" }} xs={12} md={5} >
         <Img fluid={fluid} />
       </Col>
-
-
       <Col xs={12} md={7}>
-            <>
-              <TitleProject>
-                {data.title}
-              </TitleProject>
-              {
-                data.subtitle.map(data => (
-                  <SubtitleProject key={data}>{data}</SubtitleProject>
-                )
-                )
-              }
-              <ButtonDiv>
-                {
-                  data.button.map(data => (
-                    <ButtonView key={data.name} target="_blank" rel="noopener noreferrer" href={data.url}>
-                      {data.name}
-                    </ButtonView>
-                  ))
-                }
-              </ButtonDiv>
-            </>
-      </Col>
-
-      
-    </Row>
-  </Card>
-)
-
-
-const ProjectLeftCard = ({ fluid, data }: ProjectCardProps) => (
-  <Card xs={12}>
-    <Row>
-      <Col xs={12} md={6}>
-
-            <TitleProject>
-              {data.title}
-            </TitleProject>
-
-      </Col>
-      <Col style={{ padding: "0" }} xs={12} md={6} >
-        <Img fluid={fluid} />
+        <>
+          <TitleProject>
+            {data.title}
+          </TitleProject>
+          {
+            data.subtitle.map(data => (
+              <SubtitleProject key={data}>{data}</SubtitleProject>
+            ))}
+          <ButtonDiv>
+            {
+              data.button.map(data => (
+                <ButtonView key={data.name} target="_blank" rel="noopener noreferrer" href={data.url}>
+                  {data.name}
+                </ButtonView>
+              ))
+            }
+          </ButtonDiv>
+        </>
       </Col>
     </Row>
   </Card>
 )
 
-export { ProjectStyle,ButtonView, ButtonDiv, ProjectCard, ProjectLeftCard }
+
+
+export {SubtitleProject, TitleProject,  ProjectStyle, ButtonView, ButtonDiv, ProjectCard, Card }
