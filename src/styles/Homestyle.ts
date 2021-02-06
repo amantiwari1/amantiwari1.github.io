@@ -1,7 +1,5 @@
 import styled from "styled-components"
 import { Col, Row } from "react-bootstrap"
-import { GatsbyImage } from "gatsby-plugin-image"
-
 
 type Skill = {
   skillcolor: string
@@ -9,14 +7,24 @@ type Skill = {
 }
 
 const HomeHeader = styled.div`
-        min-height: 100vh;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+`
+const Avatar = styled.div`
 
-` 
-const Avatar = styled(GatsbyImage)`
+.avatar {
+
   margin: 10px;
   margin-top: 10px;
   border-radius: 50%;
   border: 8px ${props => props.theme.text} solid;
+
+}
+  
 `
 
 const Header = styled.div`
@@ -34,7 +42,6 @@ const Name = styled.div`
   margin-left: auto;
   margin-right: auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
-
 `
 
 const Topic = styled.p`
@@ -57,7 +64,7 @@ const Card = styled.div`
 
 const Content = styled.div`
   margin: 10px;
-  `
+`
 
 const Table = styled.div`
   margin: auto;
@@ -75,7 +82,7 @@ const TD = styled(Col)``
 const TableTitle = styled.p`
   font-weight: 700;
   font-size: 18px;
-  white-space: nowrap;  
+  white-space: nowrap;
 `
 
 const Skillname = styled.p<Skill>`

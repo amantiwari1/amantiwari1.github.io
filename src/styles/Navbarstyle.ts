@@ -182,7 +182,10 @@ const Div = styled.div`
 
 const FontAwesomeIconStyle = styled(FontAwesomeIcon)`
     margin-right: 5px;
-
+    width: 20px;
+    height: 20px;
 `
+
+
 
 export {FontAwesomeIconStyle,  Nav, NavItem, HeaderStyle, Div }

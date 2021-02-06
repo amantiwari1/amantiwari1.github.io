@@ -1,39 +1,31 @@
 import React from "react"
 import { Col, Row } from "react-bootstrap"
-import { useStaticQuery, graphql } from "gatsby"
 import { Avatar, Header, Name, Topic, Content, Card, HomeHeader } from "../styles/Homestyle"
 import Education from "../components/education"
 import Skills from "../components/Skills"
 const { HomeData } = require("../data.ts")
+import { StaticImage } from "gatsby-plugin-image"
+
+
 
 
 
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    query MyQuery {
-      file(relativePath: { eq: "aman.png" }) {
-        childImageSharp {
-        gatsbyImageData(placeholder: BLURRED, transformOptions: {fit: COVER, cropFocus: CENTER}, width: 260, height: 300)
-        }
-      }
-    }
-  `)
-
   return (
     <>
       <Row>
-
       <HomeHeader>
-
+        <h1>Hello, I am Aman Tiwari</h1>
       </HomeHeader>
       </Row>
+      
+      
       <Row>
-
-
         <Col>
           <Header>
-            <Avatar image={data.file.childImageSharp.gatsbyImageData} alt="aman photo" />
-
+            <Avatar >
+            <StaticImage class="avatar" src="../images/aman.png" alt="aman photo" width={260} height={300} placeholder="blurred" />
+            </Avatar>
             <div>
               <Name>
                 Aman Tiwari
