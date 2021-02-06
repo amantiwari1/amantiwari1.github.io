@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 const Footerstyle = styled.footer`
   background-color: #292c2f;
@@ -8,7 +10,17 @@ const Footerstyle = styled.footer`
   text-align: left;
   font: normal 16px sans-serif;
   padding: 45px 50px;
-
 `
 
-export {Footerstyle}
+const I = styled.i`
+    margin-right: 5px;
+    width: 60px;
+    height: 60px;
+    color: white;
+`
+
+
+
+
+
+export {Footerstyle, I}
