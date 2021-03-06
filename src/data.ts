@@ -18,12 +18,29 @@ const HomeData = {
 
 const TimelineData = [
     {
-      year: 2019,
-      content: `I started learning coding`
+      year: "April 2020",
+      content: `Stated learning MLOPS by Linuxworld training and start linux first time`
     },
     {
-      year: 2018,
-      content: `I started learning first coding in class 11 subject is IP by school. Langauge Java GUI`
+      year: "Jan 2020",
+      content: `Stated learning data science by datacamp.com Online courses`
+    },
+    {
+      year: "Nov 2019",
+      content: `Represent Indian Tean In Busan, South Korea  In Global It Challenge (Paralympics) And Secured Third Rank In The Own Category I.E. Hearing Impairment.`
+    },
+    {
+      year: "July 2019",
+      content: `Achieved First Rank In India In Own Category I.E. Hearing Impairment At National IT Competition Held In IIT Kurukshetra
+      `
+    },
+    {
+      year: "2019",
+      content: `I started learning python which is most popular language programming by soloLearn app`
+    },
+    {
+      year: "Aug 2018",
+      content: `I started learning first programming in class 11 IP Subject by school. Langauge Java GUI`
     },
   ]
 
@@ -63,7 +80,7 @@ const SkillData = [
     },
     {
       name: "Backend  Frameworks",
-      skill: ["Fastapi", "Node.js"],
+      skill: ["Fastapi", "Node.js", "Graphql"],
       color: "black",
       background: "yellow",
     },
@@ -131,6 +148,7 @@ const CertificationData = {
 
 const ProjectData = {
 
+   
     CourseBlog: {
         title: "Course and Internsip Blog",
         subtitle: "This project is Course and Internship website where to enroll, Where and how to apply for free with blazing fast website. Built by GatsbyJS and Styled Compoments",
@@ -141,16 +159,7 @@ const ProjectData = {
             }
         ],
     },
-    datastructure: {
-        title: "Data Structures & Algorithms Implementation",
-        subtitle: "This repository is dedicated to Data Structures and Algorithms Implementation which I've learnt till the date. Language of implementation is python.",
-        url: [
-            {
-                name: "View Source",
-                link: "https://github.com/amantiwari1/data_structure"
-            }
-        ],
-    },
+
     face: {
         title: "Face Detection in Real Time",
         subtitle: "This is a Machine Learning project. I built the Real-Time Face with Collect Image automatically by CV2 and split it into Training and Testing for evaluation. It is used by the CNN model.",
@@ -161,6 +170,23 @@ const ProjectData = {
             }
         ],
     },
+
+    datastructure: {
+        title: "Data Structures & Algorithms Implementation",
+        subtitle: "This repository is dedicated to Data Structures and Algorithms Implementation which I've learnt till the date. Language of implementation is python.",
+        url: [
+            {
+                name: "View Source",
+                link: "https://github.com/amantiwari1/data_structure"
+            }
+        ],
+    },
+
+   
+
+   
+    
+    
     
 }
 

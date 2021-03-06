@@ -1,8 +1,9 @@
 import React from "react"
 import { Col, Row } from "react-bootstrap"
-import { Avatar, Header, Name, Topic, Content, Card, HomeHeader } from "../styles/Homestyle"
+import { Avatar, Header, Name, Topic, Content, Card, HomeHeader, TextHeader } from "../styles/Homestyle"
 import Education from "../components/education"
 import Skills from "../components/Skills"
+import Experience from "../components/Experience"
 const { HomeData } = require("../data.ts")
 import { StaticImage } from "gatsby-plugin-image"
 
@@ -14,17 +15,20 @@ const IndexPage = () => {
   return (
     <>
       <Row>
-      <HomeHeader>
-        <h1>Hello, I am Aman Tiwari</h1>
-      </HomeHeader>
+        <HomeHeader>
+          <TextHeader>👋 Hi </TextHeader>
+            <br />
+            <br />
+          <TextHeader>, I am Aman Tiwari</TextHeader>
+        </HomeHeader>
       </Row>
-      
-      
+
+
       <Row>
         <Col>
           <Header>
             <Avatar >
-            <StaticImage class="avatar" src="../images/aman.png" alt="aman photo" width={260} height={300} placeholder="blurred" />
+              <StaticImage class="avatar" src="../images/aman.png" alt="aman photo" width={260} height={300} placeholder="blurred" />
             </Avatar>
             <div>
               <Name>
@@ -52,6 +56,12 @@ const IndexPage = () => {
             <Content>
               <Skills />
             </Content>
+            <Topic>Work Experience</Topic>
+            <Content>
+              <Experience />
+            </Content>
+
+            <br />
           </Card>
         </Col>
       </Row>

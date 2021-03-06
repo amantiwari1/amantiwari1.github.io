@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectStyle, Card, TitleProject, SubtitleProject, ButtonDiv, ButtonView } from "../styles/ProjectStye";
+import { ProjectStyle, Card, TitleProject, SubtitleProject, ButtonDiv, ButtonView, ProjectTopic } from "../styles/ProjectStye";
 import { useStaticQuery, graphql } from "gatsby";
 import { Row, Col } from "react-bootstrap";
 import { GatsbyImage } from "gatsby-plugin-image"
@@ -30,22 +30,25 @@ function project() {
 
 
   `)
-  return (
+  return ( <>
+  <br />
+      <ProjectTopic>Project</ProjectTopic>
     <ProjectStyle>
+
       {
         data.allFile.nodes.map((data: any) => (
           <>
             <Card xs={12}>
               <Row>
                 <Col style={{ padding: "0" }} xs={12} md={5} >
-                <GatsbyImage image={data.childImageSharp.gatsbyImageData} alt={data.fields.title} />
+                  <GatsbyImage image={data.childImageSharp.gatsbyImageData} alt={data.fields.title} />
                 </Col>
                 <Col xs={12} md={7}>
                   <>
                     <TitleProject>
                       {data.title}
                     </TitleProject>
-                        <SubtitleProject >{data.fields.subtitle}</SubtitleProject>
+                    <SubtitleProject >{data.fields.subtitle}</SubtitleProject>
                     <ButtonDiv>
                       {
                         data.fields.urlarray.map((data: any) => (
@@ -63,7 +66,7 @@ function project() {
         ))
       }
     </ProjectStyle>
-  );
+  </>);
 }
 
 export default project;

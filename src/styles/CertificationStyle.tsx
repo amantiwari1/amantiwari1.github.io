@@ -13,6 +13,9 @@ const CertificationCardStyle = styled.div`
   height: 100%;
   width: 100%;
 `
+const CertificationTopic = styled.h1`
+ text-align: center;
 
+`
 
 export {CertificationCardDiv,CertificationCardStyle }

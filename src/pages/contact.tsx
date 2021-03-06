@@ -6,13 +6,13 @@ function contact() {
 
         <Center>
             
-        <CardContact>
+        <CardContact action="https://mailthis.to/amantiwari78632@gmail.com" method="POST" >
             <ContactTitle>Contact Me</ContactTitle>
-            <InputStyle type="text" placeholder="Name" />
+            <InputStyle type="text" name="name" placeholder="Name" />
             <br />
-            <InputStyle type="email" placeholder="Email" />
+            <InputStyle type="email" name="_replyto" placeholder="Email" />
             <br />
-            <TextArea  placeholder="Your Message">
+            <TextArea name="message"  placeholder="Your Message">
             </TextArea>
 
             <ContactButton >

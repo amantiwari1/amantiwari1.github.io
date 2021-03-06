@@ -43,6 +43,7 @@ const Layout = ({ children }: LayoutProps) => {
       <Body DarkMode={data.DarkMode.publicURL} LightMode={data.LightMode.publicURL} thememode={theme}>
 
         <Container><div style={{ marginTop: "60px" }}></div>{children}</Container>
+      <br />
       </Body>
       <Footer />
     </ThemeProvider>

@@ -46,9 +46,8 @@ const Name = styled.div`
 
 const Topic = styled.p`
   margin-top: 20px;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: 700;
-  text-align: center;
   width: auto;
   border-radius: 60px;
   backdrop-filter: blur(8px);
@@ -59,7 +58,7 @@ const Card = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   border-radius: 10px;
   backdrop-filter: blur(8px);
-  text-align: center;
+  padding: 20px;
 `
 
 const Content = styled.div`
@@ -93,9 +92,17 @@ const Skillname = styled.p<Skill>`
   border-radius: 70px;
   display: inline-block;
   font-size: inherit;
+`   
+
+const TextHeader = styled.h3`
+
+    text-align: center;
+    display: block;
+
 `
 export {
   Skillname,
+  TextHeader,
   Avatar,
   Header,
   Name,

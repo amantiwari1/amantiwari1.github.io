@@ -141,4 +141,9 @@ const Timelinestyle = styled.div`
 }
 `
 
-export {Timelinestyle, TimelineDiv}
+const TimeLineTopic = styled.h1`
+ text-align: center;
+
+`
+
+export {Timelinestyle, TimelineDiv, TimeLineTopic}

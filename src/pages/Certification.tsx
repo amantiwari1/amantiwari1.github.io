@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image"
 import { Col, Row } from "react-bootstrap"
-import { ButtonView, ButtonDiv } from "../styles/ProjectStye";
+import { ButtonView, ButtonDiv, ProjectTopic } from "../styles/ProjectStye";
 
 
 
@@ -26,6 +26,9 @@ const Certification = () => {
 }
     `)
     return (
+        <>
+        <br />
+        <ProjectTopic>Certification</ProjectTopic>
         <CertificationCardDiv>
             {
                 data.allFile.nodes.map((data: any) => (
@@ -49,7 +52,7 @@ const Certification = () => {
                 ))
             }
         </CertificationCardDiv>
-    )
+    </>)
 }
 
 export default Certification

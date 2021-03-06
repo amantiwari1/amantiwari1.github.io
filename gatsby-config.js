@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-load-script',
       options: {
-        src: 'https://kit.fontawesome.com/a076d05399.js',
+        src: 'https://kit.fontawesome.com/693b8ad455.js',
       },
     },
     {

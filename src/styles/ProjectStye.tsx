@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { Row, Col } from "react-bootstrap"
-import React from "react"
-import Img from "gatsby-image";
+
 
 
 
@@ -55,54 +54,18 @@ const ButtonDiv = styled.p`
       text-align: right;
 `
 
+const ProjectTopic = styled.h1`
+ text-align: center;
 
-interface ProjectCardProps {
-  fluid: any;
-  data: {
-    title: string;
-    subtitle: string[];
-    button: {
-      name: string;
-      url: string;
-    }[];
-  };
-
-}
+`
 
 
 
 
-const ProjectCard = ({ fluid, data }: ProjectCardProps) => (
-
-  <Card xs={12}>
-    <Row>
-      <Col style={{ padding: "0" }} xs={12} md={5} >
-        <Img fluid={fluid} />
-      </Col>
-      <Col xs={12} md={7}>
-        <>
-          <TitleProject>
-            {data.title}
-          </TitleProject>
-          {
-            data.subtitle.map(data => (
-              <SubtitleProject key={data}>{data}</SubtitleProject>
-            ))}
-          <ButtonDiv>
-            {
-              data.button.map(data => (
-                <ButtonView key={data.name} target="_blank" rel="noopener noreferrer" href={data.url}>
-                  {data.name}
-                </ButtonView>
-              ))
-            }
-          </ButtonDiv>
-        </>
-      </Col>
-    </Row>
-  </Card>
-)
 
 
 
-export {SubtitleProject, TitleProject,  ProjectStyle, ButtonView, ButtonDiv, ProjectCard, Card }
+
+
+
+export {SubtitleProject, TitleProject,  ProjectStyle, ButtonView, ButtonDiv, Card, ProjectTopic }
