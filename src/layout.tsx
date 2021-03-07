@@ -18,9 +18,7 @@ const Layout = ({ children }: LayoutProps) => {
   const data = useStaticQuery(graphql`
   
       query ImageQuery {
-        DarkMode : file(relativePath: {eq: "BackgroudImagePortfolio.svg"}) {
-          publicURL
-  }
+        
       
         LightMode : file(relativePath: {eq: "BackgroudImagePortfolioWhite.svg"}) {
           publicURL
@@ -40,7 +38,7 @@ const Layout = ({ children }: LayoutProps) => {
     <ThemeProvider theme={themeMode}>
       <GlobalStyles />
       <Navbar theme={themeToggler} />
-      <Body DarkMode={data.DarkMode.publicURL} LightMode={data.LightMode.publicURL} thememode={theme}>
+      <Body LightMode={data.LightMode.publicURL} thememode={theme}>
 
         <Container><div style={{ marginTop: "60px" }}></div>{children}</Container>
       <br />
